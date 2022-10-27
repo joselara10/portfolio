@@ -1,0 +1,229 @@
+:root {
+    /* ### Primary */
+        --darkcyan: hsl(158, 36%, 37%);
+        --cream: hsl(30, 38%, 92%);
+    /* ### Neutral */
+        --verydarkblue: hsl(212, 21%, 14%);
+        --darkgrayishblue: hsl(228, 12%, 48%);
+        --white: hsl(0, 0%, 100%);
+    /* ### Font family */
+        --montserrat: 'Montserrat', sans-serif;
+        --fraunces: 'Fraunces', serif;
+}
+
+/* Generals */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */ 
+  }
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    background-color: var(--cream);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: var(--montserrat);
+    color: var(--darkgrayishblue);
+}
+@media (min-width: 768px) {
+    p {
+        font-size: 2.2rem;
+        line-height: 1.5;
+        font-family: var(--montserrat);
+        color: var(--darkgrayishblue);
+    }
+}
+a {
+    text-decoration: none;
+}
+
+/* fonts */
+h1 {
+    font-size: 3.3rem;
+    font-weight: 8;
+    margin: .5rem 0;
+    line-height: 1;
+    font-family: var(--fraunces);
+    color: var(--verydarkblue);
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 5rem;
+        margin: 1.5rem 0;
+        line-height: 1;
+        font-family: var(--fraunces);
+        color: var(--verydarkblue);
+    }
+}
+h3 {
+    margin: 0;
+}
+
+.container {
+    max-width: 100%;
+    height: auto;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 2rem;
+    max-width: 100%;
+    height: auto;
+    margin: 2rem 2rem;
+    box-shadow: 10px 10px 41px -15px rgba(0,0,0,0.61);
+}
+@media (min-width: 768px) {
+    .card {
+        max-width: 80rem;
+        height: 60rem;
+    } 
+}
+
+.main-grid {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .main-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Body */
+
+.image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 2rem 2rem 0 0;
+}
+@media (min-width: 768px) {
+    .image {
+        min-height: 60rem;
+        border-radius: 2rem 0 0 2rem;
+    }
+}
+
+.product {
+    padding: 2rem;
+    margin: 0;
+}
+.product__type {
+    margin: 0;
+    letter-spacing: .3rem;
+}
+@media (min-width: 768px) {
+    .product__type {
+        letter-spacing: .4rem;
+    }
+}
+
+
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .price-grid {
+        gap: 3rem;
+    }
+}
+
+.price {
+    font-family: var(--fraunces);
+    font-size: 3rem;
+    margin: 0;
+    color: var(--darkcyan);
+}
+@media (min-width: 768px) {
+    .price {
+        font-family: var(--fraunces);
+        font-size: 5rem;
+        color: var(--darkcyan);
+    }
+}
+
+.offer-price {
+    text-decoration: line-through;
+    font-size: 1.5rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    color: var(--darkgrayishblue);
+    font-family: var(--montserrat);
+}
+.cart-icon {
+    height: 2rem;
+    width: 2rem;
+}
+
+.button {
+    background-color: var(--darkcyan);
+    padding: 1.5rem 5rem;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: var(--montserrat);
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+@media (min-width: 768px) {
+    .button {
+        background-color: var(--darkcyan);
+        padding: 1.5rem 3rem;
+        max-width: 95%;
+        margin: 0 auto 3rem auto;
+        text-align: center;
+        font-family: var(--montserrat);
+        font-size: 1.5rem;
+        border-radius: 1rem;
+        font-weight: bold;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+/* footer */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-family: var(--montserrat);
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        display: flex;
+        justify-content: center;
+        font-family: var(--montserrat);
+        font-size: 1.5rem;
+        margin: 4rem auto;
+    }
+}
